@@ -1,7 +1,13 @@
+*** Variables ***
+${a}              1
+${b}              2
+${c}              3
+
 *** Test Cases ***
 Template with embedded arguments
     [Template]    The result of ${value1} and ${value2} should be ${expected}
-    1    1    2
+    ${a}    ${a}    ${b}
+    ${a}    3    4
     1    2    3
 
 *** Keywords ***
